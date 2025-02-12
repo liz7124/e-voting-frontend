@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
-//const API_URL = process.env.REACT_APP_API_URL || 'https://e-voting-frontend.onrender.com';
 const API_URL = process.env.REACT_APP_API_URL;
 
 export default function App() {
@@ -11,15 +10,6 @@ export default function App() {
   const [candidates, setCandidates] = useState([]);
   const [hasVoted, setHasVoted] = useState(false);
   const [results, setResults] = useState([]);
-
-  const App = () => {
-    console.log("App Loaded");  // Tambahkan ini
-    return (
-      <div>
-        <h1>Welcome to E-Voting App!</h1>
-      </div>
-    );
-  };
 
   const handleLogin = async () => {
     try {
